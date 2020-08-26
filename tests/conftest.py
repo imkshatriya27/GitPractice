@@ -11,7 +11,7 @@ def pytest_addoption(parser):  # This block is for selecting different browser
 def setup(request):
     browser_name = request.config.getoption("browser_name")
     if browser_name == "chrome":
-        driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
+        driver = webdriver.Chrome()
 
         driver.maximize_window()
     elif browser_name == "firefox":
